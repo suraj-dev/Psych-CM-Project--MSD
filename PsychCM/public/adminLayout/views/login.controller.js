@@ -6,9 +6,31 @@
         .module("PsychWebApp")
         .controller("LoginController", LoginController);
 
-    function LoginController($scope, $location)
+    function LoginController($location, UserService)
     {
-        $scope.$location = $location;
+        var vm = this;
+        vm.login = login;
+
+        function login(user) {
+            if(user) {
+
+                var user = UserService.login(user);
+                if(user) {
+                    console.log(user);
+                    UserService.setCurrentUser(user);
+                    $location.url("/location");
+                }
+                  /*  .success(function(response) {
+                        UserService.setCurrentUser = response;
+                        $location.url("/location")
+                    })*/
+            }
+
+
+        }
+
+
+
     }
 
 })();

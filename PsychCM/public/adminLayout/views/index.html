@@ -40,6 +40,9 @@
     <script src="adminProfile.controller.js"></script>
     <script src="location.controller.js"></script>
     <script src="targetGroup.controller.js"></script>
+    <script src="../services/user.service.client.js"></script>
+    <script src="navigation.controller.js"></script>
+
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -50,7 +53,7 @@
 
 <body ng-controller="MainController">
 
-<div ng-include="'navigation.view.html'">
+<div ng-show="currentUser" ng-include="'navigation.view.html'">
 
 </div>
 
