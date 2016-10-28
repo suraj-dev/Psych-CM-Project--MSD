@@ -14,6 +14,7 @@
         function login(user) {
             if(user) {
 
+
                 UserService.login(user)
                 .success(function(response) {
                 	console.log("Response received: " + response);
@@ -27,7 +28,6 @@
                     UserService.setCurrentUser(user);
                     $location.url("/location");
                 }*/
-                  
             }
 
 

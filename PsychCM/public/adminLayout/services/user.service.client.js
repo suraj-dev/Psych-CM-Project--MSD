@@ -17,6 +17,7 @@
         return service;
 
         function login(user) {
+
         	if(user) {
         		
         	console.log("Data being sent: " + user.email + " " + user.password);
@@ -30,6 +31,9 @@
     		}});
                 
         	}
+
+
+
         }
 
         function logout() {
